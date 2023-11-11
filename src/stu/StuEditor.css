@@ -1,0 +1,39 @@
+/*StuEditor.css*/
+
+/* WAS */
+.service-title {
+    position: absolute;
+    width: 328px;
+    height: 45px;
+    left: 42px;
+    top: 31px;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 45px;
+    color: #0D2D84;
+  }
+
+  
+/* Rectangle - 학생용 */
+.blue-rectangle {
+    position: absolute;
+    top: 35px; 
+    left: 210px; 
+    width: 104px;
+    height: 33px;
+    background: #0089ED;
+    box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+    border-radius: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    color: #FFFFFF;
+  }

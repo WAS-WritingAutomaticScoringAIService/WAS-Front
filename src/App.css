@@ -1,38 +1,141 @@
-.App {
+
+/*App.css*/
+/*학생용 버튼*/
+.Rectangle1077 {
+  position: absolute;
+  width: 40%;
+  max-width: 300px;
+  height: 78.56px;
+  left: 25%; 
+  top: 489px;
+  background: #0089ED;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  color: #FFFFFF;
+}
+
+/*교수용 버튼*/
+.Rectangle1078 {
+  position: absolute;
+  width: 40%;
+  max-width: 300px;
+  height: 78.56px;
+  right: 25%; 
+  top: 489px;
+  background: #0089ED;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  color: #FFFFFF;
+}
+
+/* 로그인 버튼 */
+.rectangle18 {
+  position: absolute;
+  top: 30px; 
+  right: 50px; 
+  width: 153px;
+  height: 54px;
+  background: #0089ED;
+  box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+
+
+@media (max-width: 768px) {
+  .Rectangle1077, .Rectangle1078 {
+      width: 80%;
+      max-width: 300px;
+      left: 10%;
+      right: 10%;
+  }
+}
+
+/* 부모 요소에 가운데 정렬을 적용 */
+.CenteredContainer {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Subheader {
+  width: 363px;
+  height: 33px;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 110%;
+  text-align: center;
+  color: #73797B;
+  margin: 0 auto;
+  position: absolute;
+  top: 200px; 
+  left: 50%; 
+  transform: translateX(-50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.WAS {
+  width: 193px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 110%;
+  text-align: center;
+  color: #0D2D84;
+  margin: 0 auto;
+  position: absolute;
+  top: 250px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AIHeader {
+  width: 527px;
+  height: 33px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 110%;
+  text-align: center;
+  color: #0D2D84;
+  margin: 0 auto;
+  position: absolute;
+  top: 350px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
-.App-link {
-  color: #61dafb;
+#AIheader-ColorDifferent {
+  color: #0089ED; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
