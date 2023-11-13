@@ -19,8 +19,8 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/stumain" element={<StuMain />} />
       <Route path="/promain" element={<ProMain />} />
-      <Route path="/promain/createtask" element={<CreateTask />} />
-      <Route path="/promain/checktask" element={<CheckTask />} />
+      <Route path="/createtask" element={<CreateTask />} />
+      <Route path="/checktask" element={<CheckTask />} />
     </Routes>
   </BrowserRouter>
 );

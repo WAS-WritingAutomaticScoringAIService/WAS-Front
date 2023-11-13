@@ -10,10 +10,10 @@ const ProMain = () => {
         <ProEditor/>
     
             <nav>
-                <Link to="/promain/createtask">
+                <Link to="/createtask">
                     <div className="Rectangle1079">과제 생성</div>
                 </Link>
-                <Link to="/promain/checktask">
+                <Link to="/checktask">
                     <div className="Rectangle1080">과제 조회</div>
                 </Link>
             </nav>

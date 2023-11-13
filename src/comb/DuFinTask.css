@@ -1,5 +1,5 @@
 /* DuFinTask.css */
-
+/*진핸중인 과제*/
 .DuringTask {
     position: absolute;
     width: 239px;
@@ -31,8 +31,54 @@
     border-radius: 12px;
 }
 
+.DuTaskInfo {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left:20%;
+  }
+  
+  .DuTaskSubject,
+  .DuTaskDivision,
+  .DuTaskTitle,
+  .DuTaskFinishDate {
+    position: relative;
+    height: 30px;
+    background: #F4F8FA;
+    border-radius: 8px;
+    border: 1px solid #D1E2EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #28B5E1;
+    margin-right: 10px; 
+  }
+  
+  .DuTaskSubject {
+    width: 400px;
+  }
+  
+  .DuTaskDivision {
+    width: 120px;
+  }
+  
+  .DuTaskTitle {
+    width: 480px;
+  }
+  
+  .DuTaskFinishDate {
+    width: 220px;
+  }
+  
 
-.FinishTask {
+  /*마감된 과제*/
+  .FinishTask {
     position: relative;
     width: 239px;
     height: 40px;
@@ -63,8 +109,47 @@
     border-radius: 12px;
 }
 
-
-
+  .FinTaskInfo {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left:20%;
+  }
   
-
+  .FinTaskSubject,
+  .FinTaskDivision,
+  .FinTaskTitle,
+  .FinTaskFinishDate {
+    position: relative;
+    height: 30px;
+    background: #F4F8FA;
+    border-radius: 8px;
+    border: 1px solid #D1E2EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #28B5E1;
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
   
+  .FinTaskSubject {
+    width: 400px;
+  }
+  
+  .FinTaskDivision {
+    width: 120px;
+  }
+  
+  .FinTaskTitle {
+    width: 480px;
+  }
+  
+  .FinTaskFinishDate {
+    width: 220px;
+  }
