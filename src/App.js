@@ -1,4 +1,4 @@
-//App.js
+//App.js(공통-메인페이지)
 import React from "react";
 import {Link} from 'react-router-dom';
 import './App.css';

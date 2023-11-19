@@ -1,4 +1,4 @@
-//CreateTask.js
+//CreateTask.js(교수용-과제 생성 페이지)
 import React, { useState} from 'react';
 import './CreateTask.css';
 import ProEditor from './ProEditor';

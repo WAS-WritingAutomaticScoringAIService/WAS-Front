@@ -1,4 +1,4 @@
-//ProMain.js
+//ProMain.js(교수용-메인페이지)
 import React from "react";
 import {Link} from 'react-router-dom';
 import "./ProMain.css";

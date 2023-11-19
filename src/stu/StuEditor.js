@@ -1,4 +1,4 @@
-// StuEditor.js
+// StuEditor.js(학생용-상단바)
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './StuEditor.css';

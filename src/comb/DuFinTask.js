@@ -1,5 +1,4 @@
-//진행중인과제, 마감된 과제 네모 박스
-// DuringTask.js
+// DuFinTask.js(진행중인과제, 마감된 과제 네모 박스)
 import React from 'react';
 import './DuFinTask.css';
 

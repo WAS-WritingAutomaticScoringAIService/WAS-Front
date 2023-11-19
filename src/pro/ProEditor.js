@@ -1,4 +1,4 @@
-// ProEditor.js
+// ProEditor.js(교수용-상단바)
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProEditor.css';

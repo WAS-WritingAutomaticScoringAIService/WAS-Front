@@ -1,4 +1,4 @@
-/* CheckTask.js */
+/* CheckTask.js (교수용-과제조회 페이지)*/
 import React from "react";
 import ProEditor from "./ProEditor";
 import DuFinTask from "../comb/DuFinTask";
