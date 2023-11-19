@@ -14,21 +14,36 @@ const CreateTask = () => {
     startTime: '',
     endDate: '',
     endTime: '',
+    password: '',
     questions: [''], // 배열로 문제 저장
   });
+
+  const [showPassword, setShowPassword] = useState(false);
 
   //입력창에 변경되는 값들을 처리
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+
+    if (name === 'password' && /^\d{0,4}$/.test(value)) {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    } else if (name !== 'password') {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   //새로운 문제 플러스버튼 클릭 시 추가
   const handleAddQuestion = () => {
-    if (formData.questions.length < 3){
+    if (formData.questions.length < 10){
       setFormData({
         ...formData,
         questions: [...formData.questions, ''], 
@@ -83,7 +98,7 @@ const CreateTask = () => {
               name="subject"
               value={formData.subject}
               onChange={handleInputChange}
-              placeholder='과목명을 입력해 주세요. ex)비판적인 사고와 토론'
+              placeholder='띄어쓰기 없이 입력해주세요. ex)비판적인사고와토론'
             />
           </div>
 
@@ -147,8 +162,23 @@ const CreateTask = () => {
           </div>
         </div>
 
+        <div className='password'>
+          <label htmlFor='password'>비밀번호 설정(숫자 4개)</label>
+          <input
+            type={showPassword ? 'text' : 'password'}
+            id ="password"
+            name="password"
+            value={formData.password}
+            onChange={handleInputChange}
+            maxLength="4"
+          />
+          <button type="button" onClick={togglePasswordVisibility}>
+            비밀번호 {showPassword ? '숨기기' : '보기'} 
+          </button>
+        </div>
+
         <div className='questions'>
-          <label htmlFor="question">문제 (최대 3개)</label>
+          <label htmlFor="question">문제 (최대 10개)</label>
           {formData.questions.map((question, index) => (
             <div key={index}>
               <textarea
@@ -161,11 +191,11 @@ const CreateTask = () => {
             </div>
           ))}
           <button type="button"className="plusbutton" onClick={handleAddQuestion}>+</button>
+          <div className='createbutton'>
+            <button type="submit" className="submitbutton">과제 생성하기</button>
+          </div>
         </div>
 
-      <div className='createbutton'>
-        <button type="submit" className="submitbutton">과제 생성하기</button>
-      </div>
       </form>
     </div>
   );
