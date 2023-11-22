@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [userpassword, setUserPassword] = useState('');
 
   const handleLogin = () => {
-    if (username && password) {
+    if (username && userpassword) {
       alert('로그인 성공'); 
     } else {
       alert('아이디와 비밀번호를 입력하세요');
@@ -56,13 +56,13 @@ const LoginForm = () => {
         />
       </div>
 
-      <div className="passwordinputContainer">
-        <label htmlFor="password" className="loginpassword">비밀번호</label>
+      <div className="userpasswordinputContainer">
+        <label htmlFor="userpassword" className="loginpassword">비밀번호</label>
         <input
           type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          id="userpassword"
+          value={userpassword}
+          onChange={(e) => setUserPassword(e.target.value)}
         />
       </div>
 
@@ -73,6 +73,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-
-
 
