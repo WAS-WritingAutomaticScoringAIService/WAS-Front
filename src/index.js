@@ -5,9 +5,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import StuMain from './stu/StuMain';
 import ProMain from './pro/ProMain';
-import Login from './comb/Login';
+import Login from './log/Login';
 import CheckTask from './pro/CheckTask';
 import CreateTask from './pro/CreateTask';
+import CreateAccount from './log/CreateAccount';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -21,6 +22,7 @@ root.render(
       <Route path="/promain" element={<ProMain />} />
       <Route path="/createtask" element={<CreateTask />} />
       <Route path="/checktask" element={<CheckTask />} />
+      <Route path="/createaccount" element={<CreateAccount />} />
     </Routes>
   </BrowserRouter>
 );
