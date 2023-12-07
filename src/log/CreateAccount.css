@@ -1,0 +1,244 @@
+/*CreateAccount.css*/
+
+  .signinboxwelcometo {
+    position: absolute;
+    top:3%;
+    left:45%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 35px;
+    color: #000000;
+  }
+
+  #signinboxWAS {
+    color: #0D2D84;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 900;
+  }
+  
+  .signinboxsign {
+    position: absolute;
+    top:7%;
+    left:44%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 82px;
+    color:  #0089ED;;
+  }
+
+  .star{
+    color:red;
+  }
+
+.signinemail{
+    position: absolute;
+    top:20%;
+    left:30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #signEmail{
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 25%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.71);
+    border-radius: 9px;
+    font-family:"Poppins";
+    font-style: normal;
+    font-size:20px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  .signinpassword{
+    position: absolute;
+    top:33%;
+    left:30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #signPassword{
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 38%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.71);
+    border-radius: 9px;
+    font-family:"Poppins";
+    font-style: normal;
+    font-size:20px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  .signinpasswordconfirm{
+    position: absolute;
+    top:46%;
+    left:30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #confirmPassword{
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 51%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.71);
+    border-radius: 9px;
+    font-family:"Poppins";
+    font-style: normal;
+    font-size:20px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  .signinname{
+    position: absolute;
+    top:59%;
+    left:30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #name{
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 64%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.71);
+    border-radius: 9px;
+    font-family:"Poppins";
+    font-style: normal;
+    font-size:20px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  .signinschool{
+    position: absolute;
+    top:72%;
+    left:30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #school{
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 77%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.71);
+    border-radius: 9px;
+    font-family:"Poppins";
+    font-style: normal;
+    font-size:20px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  .signinidnumber{
+    position: absolute;
+    top:85%;
+    left:30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #idNumber{
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 90%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.71);
+    border-radius: 9px;
+    font-family:"Poppins";
+    font-style: normal;
+    font-size:20px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  .signindepartment{
+    position: absolute;
+    top:98%;
+    left:30%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #department{
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 103%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.71);
+    border-radius: 9px;
+    font-family:"Poppins";
+    font-style: normal;
+    font-size:20px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  .signinbutton{
+    box-sizing: border-box;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 113%; 
+    background: #0089ED;
+    color:white;
+    border: 1px solid rgba(0, 137, 237, 0.71);
+    border-radius: 9px;
+    font-family:"Poppins";
+    font-style: normal;
+    font-size:20px;
+    font-weight: 400;
+    padding: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }

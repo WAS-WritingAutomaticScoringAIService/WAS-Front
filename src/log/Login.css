@@ -4,6 +4,7 @@
   .loginCenteredContainer {
     width: 50%; 
     float: left; 
+    margin:0 auto;
   }
   
   .loginSubheader {
@@ -18,8 +19,8 @@
     color: #73797B;
     margin: 0 auto;
     position: absolute;
-    top: 250px; 
-    left: 180px;
+    top: 30%; 
+    left: 13%;
 
   }
   
@@ -35,8 +36,8 @@
     color: #0D2D84;
     margin: 0 auto;
     position: absolute;
-    top: 300px; 
-    left:260px;
+    top: 37%; 
+    left:18%;
   }
   
   .loginAIHeader {
@@ -51,8 +52,8 @@
     color: #0D2D84;
     margin: 0 auto;
     position: absolute;
-    top: 400px; 
-    left:101px;
+    top: 50%; 
+    left:7%;
   }
   
   #loginAIheader-ColorDifferent {
@@ -63,8 +64,8 @@
     position: absolute;
     width: 539px;
     height: 741px;
-    left: 800px;
-    top: 45px;
+    right: 9%;
+    top: 5%;
     background: #FFFFFF;
     box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.08);
     border-radius: 40px;
@@ -112,7 +113,7 @@
     line-height: 24px;
   }
 
-  #username{
+  #email{
     box-sizing: border-box;
     position: absolute;
     left: 5%;
@@ -173,6 +174,7 @@
     font-style: normal;
     font-size:17px;
     font-weight: 700;
+    cursor: pointer;
   }
 
   .noaccount{
