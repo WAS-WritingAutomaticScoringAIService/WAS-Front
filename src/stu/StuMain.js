@@ -1,4 +1,4 @@
-// StuMain.js(학생용-메인페이지)
+// StuMain.js(학생용-메인 페이지)
 import React, { useState } from 'react';
 import StuEditor from "./StuEditor";
 import "./StuMain.css";

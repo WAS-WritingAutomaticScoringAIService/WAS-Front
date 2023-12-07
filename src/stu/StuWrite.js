@@ -1,4 +1,4 @@
-//StuWrite.js
+//StuWrite.js(학생용-답안작성 페이지)
 import React, { useState } from 'react';
 import StuEditor from './StuEditor';
 //import axios from 'axios';
