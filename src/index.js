@@ -9,6 +9,9 @@ import Login from './log/Login';
 import CheckTask from './pro/CheckTask';
 import CreateTask from './pro/CreateTask';
 import CreateAccount from './log/CreateAccount';
+import StuWrite from './stu/StuWrite';
+import StuCheckTask from './stu/StuCheckTask';
+import StuDuTask from './stu/StuDuTask';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -23,6 +26,9 @@ root.render(
       <Route path="/createtask" element={<CreateTask />} />
       <Route path="/checktask" element={<CheckTask />} />
       <Route path="/createaccount" element={<CreateAccount />} />
+      <Route path='/stuwrite' element={<StuWrite />} />
+      <Route path='/stuchecktask' element={<StuCheckTask />} />
+      <Route path='/studutask' element={<StuDuTask />} />
     </Routes>
   </BrowserRouter>
 );
