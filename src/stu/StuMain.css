@@ -1,93 +1,82 @@
-/*StuMain.css(학생용-메인 페이지-CSS)*/
-
-.searchsubject{
-    position: relative;
-    width: 820px;       
-    margin: 0 auto;
-}
-
-.searchsubject input {
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 137, 237, 0.48);
-    border-radius: 20px;
-    position: absolute;
-    width: 650px;
-    height: 54px;
-    top: 146px;
-    left: 0;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: 0.5px;
-}
-
-.searchsubject button {
-    box-sizing: border-box;
-    position: absolute;
-    width: 150px;
-    height: 54px;
-    top: 146px;
-    left: 670px;
-    background: #0089ED;
-    border: 1px solid rgba(0, 137, 237, 0.48);
-    border-radius: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    color: #FFFFFF;
+/* StuMain.css(학생용-메인 페이지-CSS)*/
+/* WAS */
+.StuMain .service-title {
+  position: absolute;
+  width: 328px;
+  height: 45px;
+  left: 42px;
+  top: 31px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 45px;
+  color: #0D2D84;
 }
 
 
-.DuInfo{
-    position: absolute;
-    top: 230px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-  }
-  
-  .DuSubject,
-  .DuDivision,
-  .DuTitle,
-  .DuFinishDate {
-    height: 30px;
-    background: #F4F8FA;
-    border-radius: 8px;
-    border: 1px solid #D1E2EA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #28B5E1;
-    margin-right: 10px; 
-  }
-  
-  .DuSubject {
-    width: 400px;
-  }
-  
-  .DuDivision {
-    width: 120px;
-  }
-  
-  .DuTitle {
-    width: 480px;
-  }
-  
-  .DuFinishDate {
-    width: 220px;
-  }
+/* Rectangle - 학생용 */
+.StuMain .blue-rectangle {
+  position: absolute;
+  top: 35px; 
+  left: 210px; 
+  width: 104px;
+  height: 33px;
+  background: #0089ED;
+  box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+  border-radius: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+/* 과제 생성 버튼 */
+.Rectangle1081 {
+  position: absolute;
+  width: 50%; 
+  height: 15%; 
+  left: 25%; 
+  top: 30vh; 
+  background: #0089ED;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5vw; 
+  line-height: 6vh; 
+  color: #FFFFFF;
+}
+
+/* 과제 조회 버튼 */
+.Rectangle1082 {
+  position: absolute;
+  width: 50%; 
+  height: 15%; 
+  left: 25%; 
+  top: 50vh; 
+  background: #0089ED;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5vw; 
+  line-height: 6vh; 
+  color: #FFFFFF;
+}

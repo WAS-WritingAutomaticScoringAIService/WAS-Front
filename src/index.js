@@ -12,6 +12,7 @@ import CreateAccount from './log/CreateAccount';
 import StuWrite from './stu/StuWrite';
 import StuCheckTask from './stu/StuCheckTask';
 import StuDuTask from './stu/StuDuTask';
+import StuSearch from './stu/StuSearch';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -23,6 +24,7 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/stumain" element={<StuMain />} />
       <Route path="/promain" element={<ProMain />} />
+      <Route path="/stusearch" element={<StuSearch />} />
       <Route path="/createtask" element={<CreateTask />} />
       <Route path="/checktask" element={<CheckTask />} />
       <Route path="/createaccount" element={<CreateAccount />} />

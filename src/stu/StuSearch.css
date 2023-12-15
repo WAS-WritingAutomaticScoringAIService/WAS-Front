@@ -1,0 +1,93 @@
+/*StuSearch.css(학생용-과제검색 페이지-CSS)*/
+
+.searchsubject{
+    position: relative;
+    width: 820px;       
+    margin: 0 auto;
+}
+
+.searchsubject input {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.48);
+    border-radius: 20px;
+    position: absolute;
+    width: 650px;
+    height: 54px;
+    top: 146px;
+    left: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.searchsubject button {
+    box-sizing: border-box;
+    position: absolute;
+    width: 150px;
+    height: 54px;
+    top: 146px;
+    left: 670px;
+    background: #0089ED;
+    border: 1px solid rgba(0, 137, 237, 0.48);
+    border-radius: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
+
+
+.DuInfo{
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+  }
+  
+  .DuSubject,
+  .DuDivision,
+  .DuTitle,
+  .DuFinishDate {
+    height: 30px;
+    background: #F4F8FA;
+    border-radius: 8px;
+    border: 1px solid #D1E2EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #28B5E1;
+    margin-right: 10px; 
+  }
+  
+  .DuSubject {
+    width: 400px;
+  }
+  
+  .DuDivision {
+    width: 120px;
+  }
+  
+  .DuTitle {
+    width: 480px;
+  }
+  
+  .DuFinishDate {
+    width: 220px;
+  }
