@@ -1,0 +1,46 @@
+/*ProDetail.css(교수용 - 채점 결과 개인 상세 조회 페이지-CSS)*/
+
+.detailinfo{
+    display: flex;
+    position: absolute;
+    top: 25%;
+    left:20%;
+  }
+  
+  .detailname,
+  .detailid,
+  .detailmajor,
+  .detailcheck {
+    position: relative;
+    height: 30px;
+    background: #F4F8FA;
+    border-radius: 8px;
+    border: 1px solid #D1E2EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #28B5E1;
+    margin-right: 10px; 
+  }
+
+  .detailname {
+    width: 150px;
+  }
+  
+  .detailid {
+    width: 200px;
+  }
+  
+  .detailmajor {
+    width: 300px;
+  }
+  
+  .detailcheck {
+    width: 220px;
+  }

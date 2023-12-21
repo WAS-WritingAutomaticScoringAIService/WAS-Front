@@ -13,6 +13,8 @@ import StuWrite from './stu/StuWrite';
 import StuCheckTask from './stu/StuCheckTask';
 import StuDuTask from './stu/StuDuTask';
 import StuSearch from './stu/StuSearch';
+import ProDetail from './pro/ProDetail';
+import ProPersonal from './pro/ProPersonal';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -31,6 +33,8 @@ root.render(
       <Route path='/stuwrite' element={<StuWrite />} />
       <Route path='/stuchecktask' element={<StuCheckTask />} />
       <Route path='/studutask' element={<StuDuTask />} />
+      <Route path='/prodetail' element={<ProDetail />} />
+      <Route path='/propersonal' element={<ProPersonal />} />
     </Routes>
   </BrowserRouter>
 );
