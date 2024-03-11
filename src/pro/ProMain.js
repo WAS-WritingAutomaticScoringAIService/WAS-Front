@@ -11,10 +11,10 @@ const ProMain = () => {
     
             <nav>
                 <Link to="/createtask">
-                    <div className="Rectangle1079">과제 생성</div>
+                    <div className="Rectangle1079">시험 생성</div>
                 </Link>
-                <Link to="/checktask">
-                    <div className="Rectangle1080">과제 조회</div>
+                <Link to="/prodetail">
+                    <div className="Rectangle1080">시험 채점 결과</div>
                 </Link>
             </nav>
     </div>

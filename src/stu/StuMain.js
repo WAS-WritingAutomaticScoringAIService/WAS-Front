@@ -11,10 +11,7 @@ const StuMain = () => {
     
             <nav>
                 <Link to="/stusearch">
-                    <div className="Rectangle1081">과제 검색</div>
-                </Link>
-                <Link to="/stuchecktask">
-                    <div className="Rectangle1082">과제 조회</div>
+                    <div className="Rectangle1081">시험 찾기</div>
                 </Link>
             </nav>
     </div>

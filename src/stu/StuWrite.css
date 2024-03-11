@@ -1,10 +1,37 @@
 /*StuWrite.css(학생용-답안작성 페이지-CSS)*/
 
+.name-input{
+    position: absolute;
+    width: 15%;
+    height: 2%;
+    top: 35%;
+    left:4%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.48);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.student-id-input{
+    position: absolute;
+    width: 15%;
+    height: 2%;
+    top: 35%;
+    left:25%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.48);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
 .stuwritetextarea{
     position: absolute;
     width: 90%;
     height: 25%;
-    top: 40%;
+    top: 55%;
     left:4%;
     background: #FFFFFF;
     border: 1px solid rgba(0, 137, 237, 0.48);

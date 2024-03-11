@@ -1,6 +1,5 @@
-//CreateAccount.js(회원가입 페이지)
 import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import './CreateAccount.css';
 
 const CreateAccount = () => {
@@ -17,65 +16,66 @@ const CreateAccount = () => {
   const [schools, setSchools] = useState([]);
 
   useEffect(() => {
-    const fetchSchoolsFromBackend = async () => {
-      try {
-        // (백엔드와 연결예정)
-        // 백엔드 연결 시 삭제 예정
-        const fetchedSchools = [
-          { id: 1, name: '숙명여자대학교' },
-          { id: 2, name: '연세대학교' },
-        ];
-
-        setSchools(fetchedSchools);
-      } catch (error) {
-        console.error('학교 가져오기 오류', error);
-      }
-    };
-
-    fetchSchoolsFromBackend();
+    // 학교 목록 가져오기 로직 (백엔드 연결 예정)
+    // 예시로 작성된 코드입니다. 실제로는 백엔드 API를 호출하는 코드로 대체해야 합니다.
+    setSchools([
+      { id: 1, name: '숙명여자대학교' },
+      { id: 2, name: '연세대학교' },
+    ]);
   }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
+    // 모든 필드 입력 확인
+    if (Object.values(formData).some((value) => value === '')) {
+      alert('모든 필드를 입력하세요');
+      return;
+    }
+
+    // 비밀번호 확인 일치 확인
+    if (formData.signPassword !== formData.confirmPassword) {
+      alert('비밀번호와 비밀번호 확인이 일치하지 않습니다');
+      return;
+    }
+
+    // API 명세에 맞춘 데이터 객체 생성
+    const userData = {
+      email: formData.signEmail,
+      password: formData.signPassword,
+      username: formData.name,
+      role: 'USER',
+      position: formData.school,
+      number: formData.idNumber,
+      department: formData.department,
+    };
+
     try {
-      // 모든 필드 입력
-      if (Object.values(formData).some((value) => !value)) {
-        alert('모든 필드를 입력하세요');
-        return;
-      }
+      // 백엔드와의 연결 코드
+      const response = await axios.post('http://localhost:8080/api/register', userData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-      // 비밀번호 확인
-      if (formData.signPassword !== formData.confirmPassword) {
-        alert('비밀번호와 비밀번호 확인이 일치하지 않습니다');
-        return;
-      }
-
-      // 사용자가 작성한 필드로 지금은 무시
-      // eslint-disable-next-line no-unused-vars
-      const user = { ...formData };
-
-      // (백엔드와 연결예정)
-      /*
-      const response = await axios.post('/api/register', user);
       console.log(response.data);
       alert('회원가입이 성공적으로 완료되었습니다');
-
-      window.location.href = "/login";
-      */
-
-      alert('회원가입이 성공적으로 완료되었습니다');
-
+      // 회원가입 성공 후 로그인 페이지로 리디렉션
+      window.location.href = '/login';
     } catch (error) {
-      console.error('에러:', error);
+      console.error('회원가입 에러:', error);
       alert('회원가입 중 오류가 발생했습니다');
     }
   };
+
 
   return (
     <div className="signinbox">

@@ -25,9 +25,6 @@ const App = () => {
         </Link>
       </nav>
 
-        <Link to = "/login">
-          <div className="rectangle18">로그인</div>
-        </Link>
     </div>
     );
 };

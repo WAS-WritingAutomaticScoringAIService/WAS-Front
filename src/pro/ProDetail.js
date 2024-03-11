@@ -11,7 +11,6 @@ const ProDetail = () => {
                 <div className='detailinfo'>
                     <p className='detailname'>이름</p>
                     <p className='detailid'>학번</p>
-                    <p className='detailmajor'>학과</p>
                     <p className='detailcheck'>채점 결과</p>
                 </div>
          </div>

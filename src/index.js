@@ -30,7 +30,7 @@ root.render(
       <Route path="/createtask" element={<CreateTask />} />
       <Route path="/checktask" element={<CheckTask />} />
       <Route path="/createaccount" element={<CreateAccount />} />
-      <Route path='/stuwrite' element={<StuWrite />} />
+      <Route path='/stuwrite/:title' element={<StuWrite />} />
       <Route path='/stuchecktask' element={<StuCheckTask />} />
       <Route path='/studutask' element={<StuDuTask />} />
       <Route path='/prodetail' element={<ProDetail />} />

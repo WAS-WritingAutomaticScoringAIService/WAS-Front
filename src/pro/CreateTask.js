@@ -2,6 +2,7 @@
 import React, { useState} from 'react';
 import './CreateTask.css';
 import ProEditor from './ProEditor';
+import axios from 'axios';
 
 //폼 데이터를 useState로 관리
 const CreateTask = () => {
@@ -14,11 +15,43 @@ const CreateTask = () => {
     startTime: '',
     endDate: '',
     endTime: '',
-    password: '',
     questions: [''], // 배열로 문제 저장
   });
 
-  const [showPassword, setShowPassword] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    const endpoint = 'http://52.79.220.41:8080/task/create';
+  
+    const payload = {
+      title: formData.title,       // 사용자가 입력한 제목
+      subject: formData.subject,   // 사용자가 입력한 과목명
+      cls: formData.division,      // 선택된 분반
+      startTime: formData.startDate + "T" + formData.startTime + ":00", // 시작 시간
+      endTime: formData.endDate + "T" + formData.endTime + ":00",       // 종료 시간
+      questions: formData.questions.map((content, index) => ({
+        content,         // 문제 내용
+        ques_num: String(index + 1)  // 문제 번호 문자열로
+      }))
+    };
+  
+    axios.post(endpoint, payload, {
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8'
+        }
+      })
+      .then(response => {
+        console.log('Task created successfully: ', response.data);
+        alert('과제가 성공적으로 생성되었습니다.');
+      })
+      .catch(error => {
+        console.error('Error creating task: ', error);
+        alert('과제 생성 중 오류가 발생했습니다.');
+      });
+
+  };
+  
+
 
   //입력창에 변경되는 값들을 처리
   const handleInputChange = (e) => {
@@ -37,9 +70,6 @@ const CreateTask = () => {
     }
   };
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
 
   //새로운 문제 플러스버튼 클릭 시 추가
   const handleAddQuestion = () => {
@@ -61,14 +91,6 @@ const CreateTask = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-
-    alert("과제 생성 폼 작성이 완료되었습니다.")
-
-    e.preventDefault();
-    // 폼 제출 로직 구현
-    console.log('과제 생성 폼이 작성되었습니다 : ', formData);
-  };
 
   return (
     <div className="CreateTask">
@@ -110,16 +132,16 @@ const CreateTask = () => {
               value={formData.division}
               onChange={handleInputChange}
             >
-              <option value="" disabled style={{ color: '#C1C1C1' }}>00</option>
-              <option value="option1">01</option>
-              <option value="option2">02</option>
-              <option value="option3">03</option>
-              <option value="option4">04</option>
-              <option value="option5">05</option>
-              <option value="option6">06</option>
-              <option value="option7">07</option>
-              <option value="option8">08</option>
-              <option value="option9">09</option>
+              <option value="" disabled style={{ color: '#C1C1C1' }}>000</option>
+              <option value="option1">001</option>
+              <option value="option2">002</option>
+              <option value="option3">003</option>
+              <option value="option4">004</option>
+              <option value="option5">005</option>
+              <option value="option6">006</option>
+              <option value="option7">007</option>
+              <option value="option8">008</option>
+              <option value="option9">009</option>
             </select>
           </div>
         </div>
@@ -160,21 +182,6 @@ const CreateTask = () => {
               onChange={handleInputChange}
             />
           </div>
-        </div>
-
-        <div className='password'>
-          <label htmlFor='password'>비밀번호 설정(숫자 4개)</label>
-          <input
-            type={showPassword ? 'text' : 'password'}
-            id ="password"
-            name="password"
-            value={formData.password}
-            onChange={handleInputChange}
-            maxLength="4"
-          />
-          <button type="button" onClick={togglePasswordVisibility}>
-            비밀번호 {showPassword ? '숨기기' : '보기'} 
-          </button>
         </div>
 
         <div className='questions'>
