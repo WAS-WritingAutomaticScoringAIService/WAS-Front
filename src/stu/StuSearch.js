@@ -12,7 +12,7 @@ const StuSearch = () => {
   // 모든 과제 리스트를 가져오는 함수
   const fetchAllAssignments = async () => {
     try {
-      const response = await axios.get('http://52.79.220.41:8080/task/list');
+      const response = await axios.get('http://3.34.191.40:8080/task/list');
       setAllAssignments(response.data); // 모든 과제 리스트를 상태에 저장합니다.
     } catch (error) {
       console.error('과제 리스트 가져오기 오류:', error);
@@ -31,7 +31,7 @@ const handleSearch = async () => {
   }
   try {
     // 서버에서 예상하는 쿼리 파라미터 이름 'keyword'를 사용
-    const response = await axios.get('http://52.79.220.41:8080/task/list/search', { params: { keyword: searchText } });
+    const response = await axios.get('http://3.34.191.40:8080/task/list/search', { params: { keyword: searchText } });
     setSearchResult(response.data); // 검색 결과를 상태에 저장합니다.
   } catch (error) {
     console.error('검색 중 오류 발생:', error);
@@ -41,15 +41,22 @@ const handleSearch = async () => {
   // 검색 결과 또는 전체 과제 리스트를 표시할 리스트 아이템을 렌더링하는 함수
   const renderAssignments = () => {
     const assignmentsToShow = searchResult || allAssignments;
-    return assignmentsToShow.map((item, index) => (
-      <li key={item.id|| index}>
-        <Link to={`/stuwrite/${encodeURIComponent(item.subject)}/`} className='DuTitle'>{item.subject}</Link>
-        <span className='DuDivision'>{item.cls}</span>
-        <span className='DuDivision'>{item.title}</span>
-        <span className='DuFinishDate'>{item.endTime}</span>
-      </li>
+    return assignmentsToShow.map((item) => (
+      // key prop을 최상위 div에 추가해야 합니다.
+      <div key={item.id}> 
+        <div className='getInfo'>
+          <Link to={`/stuwrite/${item.id}`} style={{ display: 'flex' }}>
+            <p className='getnumber'>{item.id}</p>
+            <p className='getSubject'>{item.subject}</p>
+            <p className='getDivision'>{item.cls}</p>
+            <p className='getTitle'>{item.title}</p>
+            <p className='getFinishDate'>{item.endTime}</p>
+          </Link>
+        </div>
+      </div>
     ));
   };
+
 
 
   // 컴포넌트의 JSX를 리턴합니다.
@@ -67,6 +74,7 @@ const handleSearch = async () => {
         <button onClick={handleSearch}>검색</button>
       </div>
       <div className='DuInfo'>
+        <p className='Dunumber'>번호</p>
         <p className='DuSubject'>과목</p>
         <p className='DuDivision'>분반</p>
         <p className='DuTitle'>제목</p>

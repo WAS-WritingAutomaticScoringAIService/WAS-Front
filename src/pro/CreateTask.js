@@ -21,7 +21,7 @@ const CreateTask = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    const endpoint = 'http://52.79.220.41:8080/task/create';
+    const endpoint = 'http://3.34.191.40:8080/task/create';
   
     const payload = {
       title: formData.title,       // 사용자가 입력한 제목
@@ -133,15 +133,15 @@ const CreateTask = () => {
               onChange={handleInputChange}
             >
               <option value="" disabled style={{ color: '#C1C1C1' }}>000</option>
-              <option value="option1">001</option>
-              <option value="option2">002</option>
-              <option value="option3">003</option>
-              <option value="option4">004</option>
-              <option value="option5">005</option>
-              <option value="option6">006</option>
-              <option value="option7">007</option>
-              <option value="option8">008</option>
-              <option value="option9">009</option>
+              <option value="001">001</option>
+              <option value="002">002</option>
+              <option value="003">003</option>
+              <option value="004">004</option>
+              <option value="005">005</option>
+              <option value="006">006</option>
+              <option value="007">007</option>
+              <option value="008">008</option>
+              <option value="009">009</option>
             </select>
           </div>
         </div>
