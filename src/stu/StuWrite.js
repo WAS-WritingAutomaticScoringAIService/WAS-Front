@@ -15,7 +15,7 @@ function StuWrite() {
   useEffect(() => {
     const fetchAssignmentDetails = async () => {
       try {
-        const response = await axios.get(`http://3.34.191.40:8080/task/read/${id}`);
+        const response = await axios.get(`http://3.38.135.160:8080/task/read/${id}`);
         setAssignmentDetails(response.data);
         setAnswers(response.data.questions.map(() => ''));
       } catch (error) {
@@ -36,17 +36,22 @@ function StuWrite() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // 사용자에게 제출 확인을 요청합니다.
+    const isConfirmed = window.confirm('제출하시겠습니까?');
+    if (!isConfirmed) {
+      // 사용자가 '취소'를 클릭하면 제출을 중단합니다.
+      return;
+    }
     
     // 서버가 기대하는 형식에 맞추어 answers 배열을 구성합니다.
     const submissionData = {
-      name: name,
-      studentID: studentID,
-      answers: answers.map(answer => ({ content: answer }))
+      answers: answers.map(answer => ({ name:name, number:studentID, content: answer }))
     };
   
     try {
       // POST 요청의 URL과 본문 데이터를 업데이트합니다.
-      const endpoint = `http://3.34.191.40:8080/task/read/${id}/submit`;
+      const endpoint = `http://3.38.135.160:8080/task/read/${id}/submit`;
       const response = await axios.post(endpoint, submissionData, {
         headers: {
           'Content-Type': 'application/json', // 콘텐츠 타입을 JSON으로 명시합니다.

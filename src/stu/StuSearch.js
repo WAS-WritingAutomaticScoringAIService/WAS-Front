@@ -12,7 +12,7 @@ const StuSearch = () => {
   // 모든 과제 리스트를 가져오는 함수
   const fetchAllAssignments = async () => {
     try {
-      const response = await axios.get('http://3.34.191.40:8080/task/list');
+      const response = await axios.get('http://3.38.135.160:8080/task/list');
       setAllAssignments(response.data); // 모든 과제 리스트를 상태에 저장합니다.
     } catch (error) {
       console.error('과제 리스트 가져오기 오류:', error);
@@ -31,7 +31,7 @@ const handleSearch = async () => {
   }
   try {
     // 서버에서 예상하는 쿼리 파라미터 이름 'keyword'를 사용
-    const response = await axios.get('http://3.34.191.40:8080/task/list/search', { params: { keyword: searchText } });
+    const response = await axios.get('http://3.38.135.160:8080/task/list/search', { params: { keyword: searchText } });
     setSearchResult(response.data); // 검색 결과를 상태에 저장합니다.
   } catch (error) {
     console.error('검색 중 오류 발생:', error);

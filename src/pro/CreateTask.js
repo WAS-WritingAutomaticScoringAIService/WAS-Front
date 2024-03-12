@@ -21,7 +21,7 @@ const CreateTask = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    const endpoint = 'http://3.34.191.40:8080/task/create';
+    const endpoint = 'http://3.38.135.160:8080/task/create';
   
     const payload = {
       title: formData.title,       // 사용자가 입력한 제목
@@ -193,7 +193,7 @@ const CreateTask = () => {
                 name={`question-${index}`}
                 value={question}
                 onChange={(e) => handleQuestionChange(e, index)}
-                placeholder={`문제${index + 1}. ex)"비대면 진료를 허용해야 한다"에 대해서 주장과 근거를 작성하시오.`}
+                placeholder={`문제${index + 1}. ex)"<성범죄 피의자의 신상공개>에 대한 토론에서 국민의 알권리와 개인의 인권 사이에서 판단의 기준과 이유를 설명하고, 반론을 구성하라.`}
               />
             </div>
           ))}
