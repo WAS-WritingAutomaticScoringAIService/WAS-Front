@@ -1,51 +1,70 @@
 /*ProDetail.css(교수용 - 채점 결과 개인 상세 조회 페이지-CSS)*/
 
 .detailinfo {
-  display: flex;
-  position: absolute;
-  top: 20%; /* Adjust the top value to move elements down */
-  left: 50%;
-  transform: translate(-50%, -40%); /* Adjusts for the translation as well */
-  flex-direction: row; /* Aligns children elements in a row */
-  align-items: center; /* Aligns children elements vertically in the center */
-  gap: 20px; /* Adds space between children elements */
-  width: 70%;
+position: absolute;
+top: 200px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+align-items: center;
 }
 
 
 .detailname,
 .detailid,
 .detailcheck {
-  flex: 1; /* 반응형을 위해 flex 사용 */
-  min-width: 150px; 
-  height: 30px;
-  background: #F4F8FA;
-  border-radius: 8px;
-  border: 1px solid #D1E2EA;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  color: #28B5E1;
+height: 30px;
+background: #F4F8FA;
+border-radius: 8px;
+border: 1px solid #D1E2EA;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+color: #28B5E1;
+margin-right: 10px;
 }
 
-/* 화면 크기가 768px 미만일 때 */
-@media (max-width: 768px) {
-  .detailinfo {
-    flex-direction: column; /* 화면이 작을 때 세로 스택 레이아웃으로 변경 */
-    left: 50%;
-    transform: translate(-50%, -25%); /* 모바일 화면에서 가운데 정렬 */
-  }
+.detailname { width: 300px; }
+.detailid { width: 300px; }
+.detailcheck { width: 300px; }
 
-  .detailname,
-  .detailid,
-  .detailcheck {
-    width: auto; /* 너비를 auto로 설정하여 컨테이너에 맞게 조정 */
-    margin-bottom: 10px; /* 요소들 사이의 간격 */
-  }
+
+
+
+.getdetailinfo {
+position: relative;
+top: 240px;
+left: 68%;
+transform: translateX(-50%);
+align-items: center;
+display: flex;
 }
+
+.getdetailname,
+.getdetailid,
+.getdetailcheck {
+height: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 16px;
+margin-right: 10px;
+}
+
+.getdetailname { width: 300px; }
+.getdetailid { width: 300px; }
+.getdetailcheck { width: 300px; }
+
+
+

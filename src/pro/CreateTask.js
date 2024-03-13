@@ -21,7 +21,7 @@ const CreateTask = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    const endpoint = 'http://3.38.135.160:8080/task/create';
+    const endpoint = 'http://43.201.84.225:8080/task/create';
   
     const payload = {
       title: formData.title,       // 사용자가 입력한 제목
