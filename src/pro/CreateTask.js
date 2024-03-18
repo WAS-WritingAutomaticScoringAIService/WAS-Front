@@ -3,9 +3,13 @@ import React, { useState} from 'react';
 import './CreateTask.css';
 import ProEditor from './ProEditor';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 //폼 데이터를 useState로 관리
 const CreateTask = () => {
+
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     title: '',
@@ -18,10 +22,12 @@ const CreateTask = () => {
     questions: [''], // 배열로 문제 저장
   });
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    const endpoint = 'http://43.201.84.225:8080/task/create';
+    const endpoint = 'http://43.202.54.156:8080/task/create';
   
     const payload = {
       title: formData.title,       // 사용자가 입력한 제목
@@ -43,6 +49,8 @@ const CreateTask = () => {
       .then(response => {
         console.log('Task created successfully: ', response.data);
         alert('과제가 성공적으로 생성되었습니다.');
+        navigate('/');
+
       })
       .catch(error => {
         console.error('Error creating task: ', error);

@@ -16,3 +16,56 @@
     border: none;
     cursor: pointer;
 }
+
+.writepropersonal{
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    top: 7%;
+    left:3%;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+.stuname
+{
+    font-weight: bold;
+    color: #0089ED;
+    font-size: 25px;
+}
+
+.stupersonal{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 25px;
+
+}
+
+.personalques{
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    top: 30%;
+    left:3%;
+    padding: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+
+}
+
+.stuperonaltext{
+    position: absolute;
+    width: 90%;
+    height: 40%;
+    top: 40%;
+    left:4%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 137, 237, 0.48);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 17px;
+}
+

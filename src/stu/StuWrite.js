@@ -15,7 +15,7 @@ function StuWrite() {
   useEffect(() => {
     const fetchAssignmentDetails = async () => {
       try {
-        const response = await axios.get(`http://43.201.84.225:8080/task/read/${id}`);
+        const response = await axios.get(`http://43.202.54.156:8080/task/read/${id}`);
         setAssignmentDetails(response.data);
         setAnswers(response.data.questions.map(() => ''));
       } catch (error) {
@@ -27,6 +27,7 @@ function StuWrite() {
       fetchAssignmentDetails();
     }
   }, [id]);
+
 
   const handleAnswerChange = (index, event) => {
     const updatedAnswers = [...answers];
@@ -51,7 +52,7 @@ function StuWrite() {
   
     try {
       // POST 요청의 URL과 본문 데이터를 업데이트합니다.
-      const endpoint = `http://43.201.84.225:8080/task/read/${id}/submit`;
+      const endpoint = `http://43.202.54.156:8080/task/read/${id}/submit`;
       const response = await axios.post(endpoint, submissionData, {
         headers: {
           'Content-Type': 'application/json', // 콘텐츠 타입을 JSON으로 명시합니다.

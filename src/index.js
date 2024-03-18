@@ -34,7 +34,7 @@ root.render(
       <Route path='/stuchecktask' element={<StuCheckTask />} />
       <Route path='/studutask' element={<StuDuTask />} />
       <Route path='/prodetail' element={<ProDetail />} />
-      <Route path='/propersonal' element={<ProPersonal />} />
+      <Route path='/pro-personal/:number' element={<ProPersonal />} />
     </Routes>
   </BrowserRouter>
 );

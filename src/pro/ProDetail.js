@@ -2,53 +2,58 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ProDetail.css';
 import ProEditor from "./ProEditor";
+import { useParams, Link } from 'react-router-dom';
 
 const ProDetail = () => {
-  // State should be an array to store the list of details
-  const [details, setDetails] = useState([]);
+  const { id } = useParams();
+  const [answers, setAnswers] = useState([]); 
+  const [assignmentDetails, setAssignmentDetails] = useState({}); 
+      
+        useEffect(() => {
+          const fetchData = async () => {
+            const hardcodedId = 'your-hardcoded-id'; // Replace with an actual ID for testing
+            try {
+              const response = await axios.get(`http://43.202.54.156:8080/task/60/answerList`);
+              setAssignmentDetails({
+                title: response.data.title,
+                subject: response.data.subject,
+                cls: response.data.cls
+              });
+              setAnswers(response.data.answers);
+            } catch (error) {
+              console.error('Error fetching data:', error);
+            }
+          };
+      
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://43.201.84.225:8080/answer/list');
-        // If you expect multiple details and want to display them all,
-        // you should save the array directly to your state.
-        setDetails(response.data);
-      } catch (error) {
-        console.error('데이터를 불러오는 중 오류가 발생했습니다:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  // Render each detail in the array
-  const renderDetails = () => {
-    return details.map((detail, index) => (
-      <div className='getdetailinfo' key={index} style={{ display: 'flex' }}>
-        <p className='getdetailname'>{detail.name}</p>
-        <p className='getdetailid'>{detail.number}</p>
-        <p className='getdetailcheck'>{detail.score || '점수 없음'}</p>
-      </div>
-    ));
-  };
-
-
+          fetchData();
+        }, []); 
 
   return (
     <div>
       <ProEditor />
+      <div className='prodetailtitle'>
+      <h1>{assignmentDetails.subject} ({assignmentDetails.cls}) </h1>
+      <h3>{assignmentDetails.title}</h3>
+      </div>
+
       <div className='detailinfo'>
         <p className='detailname'>이름</p>
         <p className='detailid'>학번</p>
         <p className='detailcheck'>채점 결과</p>
       </div>
-      {renderDetails()} 
+
+      {answers.map((detail, index) => (
+        <div className='getdetailinfo' key={index}>
+          <p className='getdetailname'>{detail.name || '이름 없음'}</p>
+          <Link to={`/pro-personal/${detail.number}`} className='getdetailid-link'>
+            <p className='getdetailid'>{detail.number || '학번 없음'}</p>
+          </Link>
+          <p className='getdetailcheck'>{detail.score !== null ? detail.score : '점수 없음'}</p>
+        </div>
+      ))}
     </div>
   );
 };
 
 export default ProDetail;
-
-
-
