@@ -1,3 +1,4 @@
+//StuWrite.js(학생용-답안작성페이지)
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './StuWrite.css';
@@ -19,7 +20,7 @@ function StuWrite() {
         setAssignmentDetails(response.data);
         setAnswers(response.data.questions.map(() => ''));
       } catch (error) {
-        console.error('과제 세부 정보를 불러오는 중 오류 발생:', error);
+        console.error('시험 세부 정보를 불러오는 중 오류 발생:', error);
       }
     };
 
@@ -38,34 +39,34 @@ function StuWrite() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // 사용자에게 제출 확인을 요청합니다.
+    // 사용자에게 제출 확인을 요청
     const isConfirmed = window.confirm('제출하시겠습니까?');
     if (!isConfirmed) {
-      // 사용자가 '취소'를 클릭하면 제출을 중단합니다.
+      // 사용자가 '취소'를 클릭하면 제출을 중단
       return;
     }
     
-    // 서버가 기대하는 형식에 맞추어 answers 배열을 구성합니다.
+    // 서버가 기대하는 형식에 맞추어 answers 배열을 구성
     const submissionData = {
       answers: answers.map(answer => ({ name:name, number:studentID, content: answer }))
     };
   
     try {
-      // POST 요청의 URL과 본문 데이터를 업데이트합니다.
+      // POST 요청의 URL과 본문 데이터를 업데이트
       const endpoint = `http://43.202.54.156:8080/task/read/${id}/submit`;
       const response = await axios.post(endpoint, submissionData, {
         headers: {
-          'Content-Type': 'application/json', // 콘텐츠 타입을 JSON으로 명시합니다.
+          'Content-Type': 'application/json', 
         }
       });
       // 응답 처리
       if (response.status === 200) {
         alert('과제가 성공적으로 제출되었습니다.');
-        navigate('/stusearch'); // 제출 성공 페이지 또는 경로로 리디렉션합니다.
+        navigate('/stusearch'); 
       }
     } catch (error) {
-      console.error('과제 제출 중 오류 발생:', error);
-      alert('과제 제출에 실패했습니다.');
+      console.error('답안 제출 중 오류 발생:', error);
+      alert('답안 제출에 실패했습니다.');
     }
   };
   

@@ -1,4 +1,4 @@
-//CreateTask.js(교수용-과제 생성 페이지)
+//CreateTask.js(교수용-시험 생성 페이지)
 import React, { useState} from 'react';
 import './CreateTask.css';
 import ProEditor from './ProEditor';
@@ -48,13 +48,13 @@ const CreateTask = () => {
       })
       .then(response => {
         console.log('Task created successfully: ', response.data);
-        alert('과제가 성공적으로 생성되었습니다.');
+        alert('시험이 성공적으로 생성되었습니다.');
         navigate('/');
 
       })
       .catch(error => {
         console.error('Error creating task: ', error);
-        alert('과제 생성 중 오류가 발생했습니다.');
+        alert('시험 생성 중 오류 발생');
       });
 
   };
@@ -207,7 +207,7 @@ const CreateTask = () => {
           ))}
           <button type="button"className="plusbutton" onClick={handleAddQuestion}>+</button>
           <div className='createbutton'>
-            <button type="submit" className="submitbutton">과제 생성하기</button>
+            <button type="submit" className="submitbutton">시험 생성하기</button>
           </div>
         </div>
 

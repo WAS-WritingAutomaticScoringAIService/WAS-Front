@@ -1,3 +1,4 @@
+//StuSearch.js(학생용-시험검색페이지)
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import StuEditor from "./StuEditor";
@@ -13,26 +14,26 @@ const StuSearch = () => {
   const fetchAllAssignments = async () => {
     try {
       const response = await axios.get('http://43.202.54.156:8080/task/list');
-      setAllAssignments(response.data); // 모든 과제 리스트를 상태에 저장합니다.
+      setAllAssignments(response.data); // 모든 과제 리스트를 상태에 저장
     } catch (error) {
-      console.error('과제 리스트 가져오기 오류:', error);
+      console.error('시험 리스트 가져오기 오류:', error);
     }
   };
 
   useEffect(() => {
-    fetchAllAssignments(); // 컴포넌트 마운트 시 모든 과제 리스트를 가져옵니다.
+    fetchAllAssignments(); // 컴포넌트 마운트 시 모든 과제 리스트를 가져옴
   }, []);
 
 // 검색 핸들러 함수
 const handleSearch = async () => {
   if (!searchText.trim()) {
-    setSearchResult(null); // 검색어가 없으면 검색 결과를 비웁니다.
+    setSearchResult(null); // 검색어가 없으면 검색 결과를 비움
     return;
   }
   try {
     // 서버에서 예상하는 쿼리 파라미터 이름 'keyword'를 사용
     const response = await axios.get('http://43.202.54.156:8080/task/list/search', { params: { keyword: searchText } });
-    setSearchResult(response.data); // 검색 결과를 상태에 저장합니다.
+    setSearchResult(response.data); // 검색 결과를 상태에 저장
   } catch (error) {
     console.error('검색 중 오류 발생:', error);
   }
@@ -42,7 +43,7 @@ const handleSearch = async () => {
   const renderAssignments = () => {
     const assignmentsToShow = searchResult || allAssignments;
     return assignmentsToShow.map((item) => (
-      // key prop을 최상위 div에 추가해야 합니다.
+      // key prop을 최상위 div에 추가
       <div key={item.id}> 
         <div className='getInfo'>
           <Link to={`/stuwrite/${item.id}`} style={{ display: 'flex' }}>
@@ -59,7 +60,7 @@ const handleSearch = async () => {
 
 
 
-  // 컴포넌트의 JSX를 리턴합니다.
+  // 컴포넌트의 JSX를 리턴
 
   return (
     <div>
@@ -82,7 +83,7 @@ const handleSearch = async () => {
       </div>
       <div>
         <ul>
-          {renderAssignments()} {/* 리스트 아이템을 렌더링하는 함수 호출 */}
+          {renderAssignments()} 
         </ul>
       </div>
     </div>

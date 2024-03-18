@@ -1,3 +1,4 @@
+//ProDetail.js(교수용 - 채점 결과 상세 조회 (list))
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ProDetail.css';
@@ -11,7 +12,7 @@ const ProDetail = () => {
       
         useEffect(() => {
           const fetchData = async () => {
-            const hardcodedId = 'your-hardcoded-id'; // Replace with an actual ID for testing
+            const hardcodedId = 'your-hardcoded-id'; 
             try {
               const response = await axios.get(`http://43.202.54.156:8080/task/60/answerList`);
               setAssignmentDetails({
@@ -21,7 +22,7 @@ const ProDetail = () => {
               });
               setAnswers(response.data.answers);
             } catch (error) {
-              console.error('Error fetching data:', error);
+              console.error('에러', error);
             }
           };
       
